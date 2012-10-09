@@ -14,17 +14,8 @@ class players {
 	int health, max_health;
 	int mana, max_mana;
 	public:
-//		players();
-		void set_name();
-//		void choose_class(int);
-//		void reset_stats;		
+		
 };
-void players::set_name(){
-	printf("Enter your hero's name: ");
-	//getline(cin, name, '\n');
-	cin >> name;
-	cout << "\nHero's name is " << name << "." << endl;
-}
 
 class Item {
 public:
@@ -318,7 +309,7 @@ while (shopping == true){
 	RPG_GO.gold_disp(); //Displays your current gold amount
 	printf("What do you want to buy?\n");
 	int sel;
-	scanf("%d", &sel);// If you type a number (< 1) or (> 15), throw error and send back to selection
+	scanf("%d", &sel);
 	sel = sel - 1;
 	cout << "How many " << wep_shop[sel].name <<"s?"<< endl;
 	int amount;
@@ -391,7 +382,6 @@ while (new_load == true)
 			while (class_choose == true)
 				{
 				printf("Name your hero:\n");
-				player[0].set_name();
 				int class_sel;
 				printf("Choose your class:\n");
 				printf("1. Warrior - Has higher attack, but lacks defense and magic stats\n");
